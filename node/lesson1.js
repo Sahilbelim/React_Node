@@ -5,3 +5,4 @@ var server = http.createServer(function (req, res) {
 })
 
 server.listen(7000);
+console.log("lesson1 start .............");

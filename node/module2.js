@@ -1,0 +1,1 @@
+module.exports = " export module using module.export method in node";

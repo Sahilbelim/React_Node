@@ -1,2 +1,13 @@
-var module1 = require('./module1')
+var module1 = require('./module1');
+var module2 = require('./module2');
+var module3 = require('./module3');
+var module4 = require('./module4');
+var students = require('./module5');
 module1.ms("helow mr/ ms/mrs  .........");
+module1.ms(module2);
+module3(10, 20);
+console.log(" name : ",module4.name);
+console.log(" age : ",module4.age);
+console.log(" weight : ", module4.weight);
+var s1 = new students("viraj ",18,"node js");
+s1.show();
