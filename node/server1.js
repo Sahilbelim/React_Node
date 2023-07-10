@@ -18,6 +18,7 @@ var server = http.createServer(function (request, responce)
         responce.write("<html><head></head><body><h1 aligh='center'>contect us</h1></body></html>");
         
     }
+    
     responce.end();
 })
 server.listen(7000);
