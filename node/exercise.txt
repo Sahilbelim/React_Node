@@ -1,5 +1,4 @@
 write a progarm to make external module to display log, error, warning ,info, method 
-
 write a progarm to send page for paricular request .
 write a progarm to send json data to paricular student .
 write a program to send page of request url using read file methode .
