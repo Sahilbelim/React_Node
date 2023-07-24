@@ -30,3 +30,29 @@ SELECT * FROM customers  WHERE creditLimit>=75000  order BY creditLimit
 SELECT customerName,phone,state FROM customers WHERE state is NOT null  --not null 
 
 SELECT customerName,phone,state FROM customers WHERE state is  null  -- null 
+
+
+SELECT * FROM customers WHERE customerName Like "a%";
+
+SELECT * FROM customers WHERE customerName Like "%ee%";
+
+SELECT * FROM customers WHERE customerName Like "%co";
+
+SELECT * FROM customers WHERE phone Like "__________";
+
+
+SELECT sum(creditLimit) FROM customers;
+
+SELECT sum(amount) FROM payments WHERE customerNumber=112
+
+SELECT min(creditLimit) FROM customers
+
+SELECT max(creditLimit) FROM customers
+
+SELECT avg(amount) FROM payments
+
+SELECT avg(creditLimit) FROM customers
+
+SELECT COUNT(*) FROM customers
+
+SELECT COUNT(*) FROM customers WHERE country ='USA'
