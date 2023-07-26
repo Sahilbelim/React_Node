@@ -56,3 +56,59 @@ SELECT avg(creditLimit) FROM customers
 SELECT COUNT(*) FROM customers
 
 SELECT COUNT(*) FROM customers WHERE country ='USA'
+
+-- fetch month wise total payment
+
+SELECT sum(amount),left(paymentDate,4) FROM payments  group by left(paymentDate,4)
+-- fetch year wise total payment
+
+SELECT sum(amount),left(paymentDate,7) FROM payments  group by left(paymentDate,7)
+
+
+SELECT customerNumber,customerName,phone  FROM customers
+
+SELECT customerNumber,paymentDate,amount FROM payments
+
+SELECT customers.customerNumber,customerName,phone,paymentDate,amount FROM customers join payments where customers.customerNumber = payments.customerNumber
+
+
+SELECT customers.customerNumber,customerName,phone,paymentDate,amount FROM customers  , payments where customers.customerNumber = payments.customerNumber
+
+SELECT c.customerNumber,customerName,phone,paymentDate,amount FROM customers as c , payments as p where c.customerNumber = p.customerNumber 
+
+SELECT c.customerNumber,c.customerName,c.phone,p.paymentDate,p.amount FROM customers as c , payments as p where c.customerNumber = p.customerNumber 
+
+-- display customerName,city,state,country and payment detail of those customers where amount is above 15000 and display it amount wise descending order
+
+SELECT customerNumber,customerName,state,city,country FROM customers
+
+SELECT * FROM payments 
+
+SELECT customers.customerName,customers.state,customers.city,customers.country ,payments.* FROM customers ,payments where customers.customerNumber=payments.customerNumber and payments.amount>=15000
+
+SELECT c.customerName,c.state,c.city,c.country ,p.* FROM customers as c ,payments as p where c.customerNumber=p.customerNumber and p.amount>=15000 
+
+SELECT c.customerName,c.state,c.city,c.country ,p.* FROM customers as c ,payments as p where c.customerNumber=p.customerNumber and p.amount>=15000 order by amount desc
+
+
+display customerNumber,customerName,orderNumber,orderdate,requireddate,status,shippeddate,productcode,quantityOrdered,priceEach,ProductName,ProductDescription in asending order of customerNumber wise 
+
+SELECT c.customerNumber,c.customerName FROM customers as c
+
+SELECT o.orderNumber,o.orderDate,o.requiredDate,o.status,o.shippedDate FROM orders as o
+
+SELECT od.productCode,od.quantityOrdered,od.priceEach FROM orderdetails as od
+
+SELECT p.productName,p.productDescription FROM products as p
+
+SELECT c.customerNumber,c.customerName ,o.orderNumber,o.orderDate,o.requiredDate,o.status,o.shippedDate,od.productCode,od.quantityOrdered,od.priceEach, p.productName,p.productDescription FROM customers as c , orders as o , orderdetails as od , products as p where c.customerNumber=o.customerNumber and   o.orderNumber=od.orderNumber and p.productCode=od.productCode order by customerNumber
+
+
+display customerNumber,customerName along with order count
+
+
+SELECT c.customerNumber,c.customerName FROM customers as c
+
+SELECT o.orderNumber, COUNT(*) FROM orders as o GROUP by o.customerNumber
+
+SELECT c.customerNumber,c.customerName,  o.orderNumber, COUNT(*) FROM customers as c,orders as o where c.customerNumber= o.customerNumber  GROUP by o.customerNumber 
