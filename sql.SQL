@@ -112,3 +112,6 @@ SELECT c.customerNumber,c.customerName FROM customers as c
 SELECT o.orderNumber, COUNT(*) FROM orders as o GROUP by o.customerNumber
 
 SELECT c.customerNumber,c.customerName,  o.orderNumber, COUNT(*) FROM customers as c,orders as o where c.customerNumber= o.customerNumber  GROUP by o.customerNumber 
+
+display total payment avg payment made in 2004
+SELECT COUNT(*), SUM(amount), avg(amount) from payments WHERE paymentDate >='2004-01-01' and paymentDate<'2005-01-01'
