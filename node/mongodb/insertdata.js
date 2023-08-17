@@ -1,29 +1,34 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
-MongoClient.connect(url, function (error, url)
+var url = "mongodb://localhost:27017/mydb";
+
+async function Insertdata()
 {
-    if (error)
+    try
     {
-        console.log(error);    
-    }
-    else
-    {
-        console.log("connection successflly ");
-        var data = {
-            name: "viraj", address: "vaghavadi rode bhavnagar  ",
-            State:"gujrat"
-        }
-        dbo = db.db("mydb");
-        dbo.collection("student").insertOne(data, function (err, res)
+        let db = await MongoClient.connect(url);
+        console.log("connection successful .");
+
+        let dbo = db.db("mydb");
+        let collection = dbo.collection("student");
+        let data = { "name": "patam", "course": "react", "fees": 15000 }
+        await collection.insertOne(data).then(function (err, result)
         {
             if (err)
             {
-                console.log(err)    
+                console.log(err);
             }
             else
             {
-                console.log("data inserted successfully ");    
+                console.log("Data Inserted successfully .");    
             }
         })
+
     }
-})
+    catch (error)
+    {
+        console.log(error);
+    }
+}
+
+Insertdata();
+console.log("Insert data start ..........");

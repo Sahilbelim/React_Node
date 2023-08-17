@@ -5,10 +5,10 @@ async function createcollection()
 {
     try
     {
-        var db = await MongoClient.connect(dburl);
+        let db = await MongoClient.connect(dburl);
         console.log("Connection successfully ");
 
-        var dbo = db.db("mydb");
+        let dbo = db.db("mydb");
         // var collection = dbo.collection("teacher");
         await dbo.createCollection('principal').then(function (error, result)
         {
