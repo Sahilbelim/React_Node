@@ -1,12 +1,12 @@
 var MongoClient = require('mongodb').MongoClient;
 var express = require('express');
 var app = express();
-var bodyparser = require("body-parser");``
+var bodyparser = require("body-parser");
 var url = "mongodb://localhost:27017/mydb";
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
 app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({ extended: true }));
+// app.use(bodyparser.urlencoded({ extended: true }));
 app.post('/student', function (request, responce) {
         
     console.log(request.body);
@@ -25,9 +25,9 @@ app.post('/student', function (request, responce) {
                     "age":age,
                     "fees":fees }
 
-        collection.insertMany(data).then(function (error, result)
+        collection.insertOne(data).then(function (error, result)
         {
-            if (error) {
+            if (error==true) {
                 console.log(error);
                 responce.json({ message: "error" });
             }
@@ -42,3 +42,4 @@ app.post('/student', function (request, responce) {
 })
 app.listen(7000);
 console.log("api 5 start .........");
+
