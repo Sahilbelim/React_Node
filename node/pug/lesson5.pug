@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title array in table
+    body 
+        h1 Array in Table
+        table( border ,cellpadding='5px',width='100%') 
+              tr  
+                    h2(align='center')  Biodata
+                    - var number=1
+              each value,key in student 
+               tr 
+                    td #{number++}        
+                    td #{key}        
+                    td #{value}        

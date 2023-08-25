@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title dynamicdata 
+    body 
+        h1 dynamicdata in pug 
+        table(width='100%',border='2px', sellpadding='5px')
+            tr 
+                -var num=1
+                th No.
+                th Name
+                th Line
+                th Description
+                th MSRP 
+            each data in all_data 
+                tr 
+                    td=num++
+                    each value,key in data 
+                        td #{value}    
