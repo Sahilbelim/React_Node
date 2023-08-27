@@ -1,0 +1,157 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+table
+{
+    width: 100%;
+}
+.title
+{
+    padding: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.menu-link
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+a.menu-link
+{
+    text-decoration: none;
+    padding: 20px;
+    margin-right: 50px;
+}
+.header
+{
+    background-color: #85FFBD;
+        background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+.profile-name
+{
+    margin-top: 175px;
+    margin-left: 20px;
+    font-size: 40px;
+}
+.content
+{
+    width: 40%;
+}
+p
+{
+    margin: 20px;
+
+}
+td.img
+{
+   
+    /* height: 50%; */
+    padding-left: 240px;
+    /* border: 2px solid black;  */
+}
+img.profile-pic
+{
+  
+    width: 400px;
+    height: 400px;
+    background-color: #e7b82cf3;
+ 
+    border-radius:400px ;
+
+}
+td
+{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+.about-cards
+{
+    margin-top: 25px;
+    /* border: 2px solid black; */
+    display: flex;
+    margin-bottom: 30px;
+
+}
+.card 
+{
+    /* border: 2px solid black; */
+    width: 23%;
+    padding: 25px;
+    margin: 5px;
+    margin: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+}
+img.img
+{
+    border-radius: 20px;
+}
+#about
+{
+    margin-top: 20px;
+}
+.contact
+{
+    display: flex;
+    padding: 20px;
+}
+.contact>div>form
+{
+    margin: 180px;
+    width: 100%;
+
+}
+.contact>div>form>input
+{
+    width: 50%;
+    height: 35px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.form
+{
+    margin: 20px;
+    width: 100%;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    background-color: #FFDEE9;
+        background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+.form>form>label
+{
+    font-size: 30px;
+}
+button
+{
+    margin: 20px 20px 20px 0px;
+    
+    padding: 15px;
+    border-radius: 10px;
+    width: 65%;
+    font-size: 30px;
+    background-color: #74EBD5;
+        background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+}
+.contact>div>img{
+    margin-top:30px ;
+    border-radius: 20px;
+}
+#services
+{
+    text-transform: uppercase;
+}
+.services
+{
+    width: 100%;
+    margin: 10px ;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
