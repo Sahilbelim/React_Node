@@ -5,7 +5,7 @@ app.set("view engine", "pug");
 app.set("views", "./");
 app.get('/products', function (request, responce) {
 
-    var sql = 'SELECT productName,productLine,productDescription, MSRP FROM products';
+    var sql = 'SELECT productCodeproductName,productLine,productDescription, MSRP FROM products';
     connection.con.query(sql, function (error, result, filds)
     {
         if (error)
